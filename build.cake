@@ -61,8 +61,7 @@ Task("BuildAndTest")
 // The default task to run if none is explicitly specified. In this case, we want
 // to run everything starting from Clean, all the way up to Publish.
 Task("Default")  
-    .IsDependentOn("BuildAndTest")
-    .IsDependentOn("PublishWeb");
+    .IsDependentOn("BuildAndTest");
 
 // Executes the task specified in the target argument.
 RunTarget(target);  
